@@ -1,6 +1,6 @@
 import {generateTestImage} from './generateImage.js';
 
-import exifr from './node_modules/exifr/dist/full.esm.js';
+// import exifr from './node_modules/exifr/dist/full.esm.js';
 
 
 let height_16bit = 240;
