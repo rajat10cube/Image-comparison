@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://www.lactame.com/lib/image-js/0.35.3/image-js.min.js"></script>
+    <script src="./node_modules/@ffmpeg/ffmpeg/dist/ffmpeg.min.js"></script>
+    <script src="./node_modules/mathjs/lib/browser/math.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img id="image" />
+            <p>Generated image</p>
+        </div>
+        <div class="grid-item">
+            <img id="new_image" />
+            <p>Generated image with Rec2020 ICC profile header</p>
+        </div>
+        <div class="grid-item">
+            <img id="pq_image" />
+            <p>Generated image converted to PQ without ICC</p>
+        </div>
+        <div class="grid-item">
+            <img id="pq_image_icc" />
+            <p>Generated image converted to PQ with Rec2020 ICC profile</p>
+        </div>
+    </div>
+    <!-- <div>
+        <video id="video_16_Linear"></video>
+        <span>AVC</span>
+    </div>
+    <div>
+        <video id="video_16_PQ"></video>
+        <span>HVC</span>
+    </div> -->
+    <!-- <div>
+        <video id="video_8_PQ"></video>
+        <span>8 bit PQ</span>
+    </div>
+    <div>
+        <video id="video_8_Linear"></video>
+        <span>8 bit Linear</span>
+    </div> -->
+    <script type="module" src="generateVideo.js"></script>
+</body>
+
+</html>
