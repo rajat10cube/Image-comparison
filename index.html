@@ -30,38 +30,22 @@
 <body>
     <div class="grid-container">
         <div class="grid-item">
-            <img id="image" />
-            <p>Generated image</p>
+            <video id="video1"></video>
+            <p>Original image without specifying anything in FFMPEG</p>
         </div>
         <div class="grid-item">
-            <img id="new_image" />
-            <p>Generated image with Rec2020 ICC profile header</p>
+            <video id="video2"></video>
+            <p>Original image specifying linear transfer function in FFMPEG</p>
         </div>
         <div class="grid-item">
-            <img id="pq_image" />
-            <p>Generated image converted to PQ without ICC</p>
+            <video id="video3"></video>
+            <p>Converted image to PQ specifying linear transfer function in FFMPEG</p>
         </div>
         <div class="grid-item">
-            <img id="pq_image_icc" />
-            <p>Generated image converted to PQ with Rec2020 ICC profile</p>
+            <video id="video4"></video>
+            <p>Converted image to PQ specifying PQ transfer function in FFMPEG</p>
         </div>
     </div>
-    <!-- <div>
-        <video id="video_16_Linear"></video>
-        <span>AVC</span>
-    </div>
-    <div>
-        <video id="video_16_PQ"></video>
-        <span>HVC</span>
-    </div> -->
-    <!-- <div>
-        <video id="video_8_PQ"></video>
-        <span>8 bit PQ</span>
-    </div>
-    <div>
-        <video id="video_8_Linear"></video>
-        <span>8 bit Linear</span>
-    </div> -->
     <script type="module" src="generateVideo.js"></script>
 </body>
 
